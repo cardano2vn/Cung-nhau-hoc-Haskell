@@ -1,0 +1,2 @@
+-- Bài tập tuần 12
+-- Tìm hiểu 5 hàm, kiểu dữ liệu mới mà bạn thấy hữu ích, mô tả cách dùng và ví dụ
