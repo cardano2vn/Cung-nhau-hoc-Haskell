@@ -1,0 +1,1 @@
+Player {pAttack = 50, pHp = 20, pDefense = 5, pComboCount = 3, pWeapon = Just (Weapon {wType = Bow, wAttack = 12, wPrice = 12, wSellPrice = 6}), pArmor = Just (Armor {aType = Helmet, aDefense = 8, aPrice = 8, aSellPrice = 4}), pMoney = 15}
