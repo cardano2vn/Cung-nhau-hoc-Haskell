@@ -1,0 +1,26 @@
+cabal-version:      3.0
+name:               ForestGame
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             Robertino Martinez
+maintainer:         robertino.martinez@iohk.io
+category:           Game
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+executable ForestModule
+    import:            warnings
+    main-is:           Main.hs
+    other-modules:     Forest.Level1
+                     , User.Actions.Move
+
+    default-extensions: NumericUnderscores
+
+    build-depends:     base
+                     , random
+    hs-source-dirs:    app, src
+    default-language:  Haskell2010
