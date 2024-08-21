@@ -1,0 +1,65 @@
+Main Menu: 	
+	Index	Menu Item	Action
+	0 		Hangman 	run game Hangman
+	1 		2048		run game 2048
+	2 		Quit		return ()
+
+- Main Loop: currentIndex
+	+ Display
+	+ Get input (w/s/enter)
+		w/s -> Tính currentIndex -> Main Loop
+		enter -> Gọi action tương ứng
+
+
+
+Hangman
+- Đọc file, random trên danh sách số thứ tự các từ -> secretWord
+
+- Hangman Loop: secretWord, guessedChars, remainingGuess
+	+ Display
+		Hình hangman (remainingGuess): dựa vào remainingGuess, chọn hình hiển thị từ 1 danh sách 
+		Từ bí mật: chỉ hiện những kí tự chứa trong `guessedChars`
+        Remaining Guess
+        Kí tự valid hay không
+    + Check win: 
+        C1: Từ bí mật hiển thị == từ bí mật
+        C2: guessedChars chứa toàn bộ kí tự của từ bí mật
+    + Check game over : remainingGuess == 0
+    + Normal process
+        Get input
+            ESC: Main Menu
+            _  : Kiểm tra hợp lệ
+        Hangman Loop
+
+
+2048 
+- Row = [Int]
+- Board = [Row]
+- emptyBoard = [[0,0,0,0], [0,0,0,0], [0,0,0,0], [0,0,0,0]]
+- initBoard = emptyBoard -> random 2 giá trị
+
+- 2048Loop: currentBoard
+	Check win : có ô 2048
+	Check game over : 
+		C1: board không còn ô trống và không thay đổi khi move dọc, ngang
+		C2: board không thay đổi khi move theo cả 4 chiều
+	Normal process:
+		Display board <- Display row <- Display cell: đảm bảo các ô cách đều <- Text.Printf.printf "%6d" number
+		Get input -> thực hiện move board 
+			a: 		Move Left <- Move row: 
+						Bỏ các ô bằng 0
+						Merge 2 ô liền kề bằng nhau: đệ quy (x:y:xs)
+						Ghép lại các số 0 vào đuôi row cho đủ số lượng 
+			s/e/d:	Xoay board về hướng trái -> move left -> xoay lại hướng ban đầu: transpose, reverse
+			ESC:	Main loop
+		
+		Kiểm tra board mới có thay đổi so với board cũ không
+			Không -> 	2048Loop
+			Có 	  -> 	Insert ô mới: 
+							Random vị trí: Lấy list tọa độ của các ô bằng 0 -> random theo số thứ tự của list đó
+							Random giá trị n, xác xuất n=2 là 75%, n=4 là 25%: 
+								-> Random số m trên 1 khoảng giá trị, vd: [1..4], sau đó chia tỷ lệ: 
+									m thuộc [1,3] -> n = 2
+									m bằng 4      -> n = 4
+						2048Loop
+						
