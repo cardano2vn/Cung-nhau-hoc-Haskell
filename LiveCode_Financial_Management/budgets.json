@@ -1,0 +1,32 @@
+[
+  {
+    "budgetId": "B1",
+    "budgetCategory": "Food",
+    "budgetAmount": 500.0,
+    "budgetDate": "2023-09-01"
+  },
+  {
+    "budgetId": "B2",
+    "budgetCategory": "Utilities",
+    "budgetAmount": 10,
+    "budgetDate": "2023-09-01"
+  },
+  {
+    "budgetId": "B3",
+    "budgetCategory": "Health",
+    "budgetAmount": 150.0,
+    "budgetDate": "2023-09-01"
+  },
+  {
+    "budgetId": "B4",
+    "budgetCategory": "Transportation",
+    "budgetAmount": 300.0,
+    "budgetDate": "2023-09-01"
+  },
+  {
+    "budgetId": "B5",
+    "budgetCategory": "Entertainment",
+    "budgetAmount": 250.0,
+    "budgetDate": "2023-09-01"
+  }
+]
