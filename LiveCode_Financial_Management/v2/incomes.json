@@ -1,0 +1,44 @@
+[
+  {
+    "incomeAmount": 500,
+    "incomeDate": "2021-08-17",
+    "incomeId": "I7",
+    "incomeSource": "sal2"
+  },
+  {
+    "incomeAmount": 200,
+    "incomeDate": "2024-05-07",
+    "incomeId": "I6",
+    "incomeSource": "sal1"
+  },
+  {
+    "incomeAmount": 2000,
+    "incomeDate": "2023-09-01",
+    "incomeId": "I1",
+    "incomeSource": "Salary"
+  },
+  {
+    "incomeAmount": 500,
+    "incomeDate": "2023-09-07",
+    "incomeId": "I2",
+    "incomeSource": "Freelancing"
+  },
+  {
+    "incomeAmount": 150.25,
+    "incomeDate": "2023-09-12",
+    "incomeId": "I3",
+    "incomeSource": "Investment Return"
+  },
+  {
+    "incomeAmount": 100,
+    "incomeDate": "2023-09-17",
+    "incomeId": "I4",
+    "incomeSource": "Gift"
+  },
+  {
+    "incomeAmount": 300,
+    "incomeDate": "2023-09-22",
+    "incomeId": "I5",
+    "incomeSource": "Bonus"
+  }
+]
